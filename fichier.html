@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>AJAX/JSON</title>
+    </head>
+    <body>
+        <div class="discuss">
+
+        </div>>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+       
+       <script type="text/javascript">
+
+        $.get('fichier.json', function(data, status, response){
+            console.log(data)
+            var m = data;
+            l = data.length;
+
+            $.each(data, function (i, item){
+                $(".discuss").append('<p>' + item.nickname + ' : ' + item.message + '</p>');
+
+            });
+        });
+            
+        </script>
+   
+
+    </body>
+</html> 
